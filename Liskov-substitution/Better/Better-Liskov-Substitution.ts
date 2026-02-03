@@ -21,6 +21,10 @@ interface FlyingBird extends Bird {
     fly(): void;
 }
 
+interface SwimmingBird extends Bird {
+    swim(): void;
+}
+
 class Sparrow implements FlyingBird {
     fly(): void {
         console.log("Sparrow is flying");
@@ -30,7 +34,7 @@ class Sparrow implements FlyingBird {
     }
 }
 
-class ProudPenguin implements Bird {
+class ProudPenguin implements SwimmingBird {
     eat(): void {
         console.log("Penguin is eating");
     }
@@ -40,7 +44,7 @@ class ProudPenguin implements Bird {
 }
 
 // This function only accepts birds that can actually fly
-function makeBirdFly(bird: FlyingBird): void {
+function makeFlyingBirdFly(bird: FlyingBird): void {
     bird.fly(); // Safe! Will never crash
 }
 

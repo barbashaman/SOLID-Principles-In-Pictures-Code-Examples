@@ -18,7 +18,7 @@ interface NotificationProvider {
 }
 
 // Concrete implementation 1 - Email
-class EmailProvider implements NotificationProvider {
+class BetterEmailProvider implements NotificationProvider {
     send(recipient: string, message: string): void {
         console.log(`Sending email to ${recipient}: ${message}`);
     }
@@ -45,7 +45,7 @@ class NotificationService {
 }
 
 // Usage - flexible and testable
-const emailProvider = new EmailProvider();
+const emailProvider = new BetterEmailProvider();
 const emailService = new NotificationService(emailProvider);
 emailService.notifyUser("user@example.com", "Hello!");
 

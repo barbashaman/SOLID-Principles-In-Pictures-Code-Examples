@@ -10,12 +10,12 @@
  * - Code expecting Bird will crash when it encounters these subclasses
  */
 
-interface Bird {
+interface BadBird {
     fly(): void;
     eat(): void;
 }
 
-class Eagle implements Bird {
+class Eagle implements BadBird {
     fly(): void {
         console.log("Eagle is flying");
     }
@@ -24,7 +24,7 @@ class Eagle implements Bird {
     }
 }
 
-class FrustratedPenguin implements Bird {
+class FrustratedPenguin implements BadBird {
     fly(): void {
         throw new Error("Penguins can't fly!"); // LSP Violation
     }
@@ -34,7 +34,7 @@ class FrustratedPenguin implements Bird {
 }
 
 // This function expects a Bird and assumes it can fly
-function makeBirdFly(bird: Bird): void {
+function makeBirdFly(bird: BadBird): void {
     bird.fly(); // Will crash if bird is a Penguin!
 }
 
