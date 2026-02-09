@@ -1,6 +1,6 @@
 # SOLID Principles - Code Examples
 
-This project provides practical, easy-to-understand examples of the **SOLID principles** in TypeScript. Each principle is demonstrated with both **Bad** (anti-pattern) and **Better** (correct) implementations.
+This project provides practical, easy-to-understand examples of the **SOLID principles** in both **TypeScript** and **C#**. Each principle is demonstrated with both **Bad** (anti-pattern) and **Better/Good** (correct) implementations.
 
 ## What is SOLID?
 
@@ -14,26 +14,50 @@ SOLID is an acronym for five design principles that help create more maintainabl
 
 ## Project Structure
 
+The project contains two sets of examples:
+
+### Abstract Examples (TypeScript)
 Each principle has its own folder with two implementations:
 
 ```
-SOLID/
+Abstract examples/
 ├── SingleResponsibility/
-│   ├── Bad/          # Violates SRP
-│   └── Better/       # Follows SRP
+│   ├── Bad/              # Violates SRP
+│   └── Better/           # Follows SRP
 ├── Open-Closed/
-│   ├── Bad/          # Violates OCP
-│   └── Better/       # Follows OCP
+│   ├── Bad/              # Violates OCP
+│   └── Better/           # Follows OCP
 ├── Liskov-substitution/
-│   ├── Bad/          # Violates LSP
-│   └── Better/       # Follows LSP
+│   ├── Bad/              # Violates LSP
+│   └── Better/           # Follows LSP
 ├── Interface-Segregation/
-│   ├── Bad/          # Violates ISP
-│   └── Better/       # Follows ISP
-├── Dependency-Inversion/
-│   ├── Bad/          # Violates DIP
-│   └── Better/       # Follows DIP
-└── README.md
+│   ├── Bad/              # Violates ISP
+│   └── Better/           # Follows ISP
+└── Dependency-Inversion/
+    ├── Bad/              # Violates DIP
+    └── Better/           # Follows DIP
+```
+
+### QA Examples (C#)
+Real-world testing examples demonstrating SOLID principles:
+
+```
+_qa-examples/
+├── SingleResponsibility/
+│   ├── Bad/              # Violates SRP
+│   └── Good/             # Follows SRP
+├── OpenClosed/
+│   ├── Bad/              # Violates OCP
+│   └── Good/             # Follows OCP
+├── LiskovSubstitution/
+│   ├── Bad/              # Violates LSP
+│   └── Good/             # Follows LSP
+├── InterfaceSegregation/
+│   ├── Bad/              # Violates ISP
+│   └── Good/             # Follows ISP
+└── DependencyInversion/
+    ├── Bad/              # Violates DIP
+    └── Good/             # Follows DIP
 ```
 
 ## The Five SOLID Principles
@@ -70,10 +94,17 @@ SOLID/
 
 ## How to Use These Examples
 
-1. **Study the Bad Implementation**: Understand what violates the principle
-2. **Identify the Problem**: Notice why it causes issues (tight coupling, hard to test, inflexible)
-3. **Review the Better Implementation**: See how to properly apply the principle
-4. **Compare**: Understand the benefits of following SOLID principles
+### TypeScript Examples (Abstract Examples)
+1. Navigate to the `Abstract examples/` folder
+2. Choose a principle folder
+3. Compare the `Bad/` implementation with the `Better/` implementation
+4. Read the comments explaining the violations and solutions
+
+### C# Examples (QA Examples)
+1. Navigate to the `_qa-examples/` folder
+2. Choose a principle folder
+3. Compare the `Bad/` implementation with the `Good/` implementation
+4. These examples are inspired by real-world testing scenarios and demonstrate practical application of SOLID principles
 
 ## Key Benefits of SOLID
 
@@ -85,10 +116,15 @@ SOLID/
 
 ## Getting Started
 
-1. Navigate to any principle folder
-2. Compare the `Bad/` implementation with the `Better/` implementation
-3. Read the comments explaining the violations and solutions
-4. Practice refactoring bad examples using SOLID principles
+**For TypeScript Examples:**
+1. Navigate to `Abstract examples/` 
+2. Open any principle folder to see Bad and Better implementations
+3. Compare and understand the differences
+
+**For C# Examples:**
+1. Navigate to `_qa-examples/`
+2. Open any principle folder to see Bad and Good implementations
+3. These real-world examples show how SOLID principles apply to testing scenarios
 
 ## Resources
 
